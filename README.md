@@ -1,137 +1,120 @@
-# HR Candidates Dashboard
+# SmartHire – AI-Powered Candidate Evaluation Dashboard
 
-A beautiful, modern React TypeScript application for HR professionals to manage job candidates. This dashboard enables filtering, sorting, and comparison of thousands of resumes, with AI-powered recommendations that rank candidates based on your specific job requirements.
+A modern, responsive React + TypeScript web application built to streamline the candidate evaluation process for HR teams and hiring managers. SmartHire enables filtering, ranking, and analyzing thousands of resumes using intelligent matching algorithms and insightful visualizations.
 
-## Screenshots
+This project was developed by **Joshua Cohen** to demonstrate full-stack UI architecture, data-driven filtering, and component-based design using React and Tailwind CSS.
 
-### Candidates Dashboard
+---
+
+## 📸 Screenshots
+
+### 🎯 Candidate Dashboard  
 ![Candidates Dashboard](Candidates.png)
 
-### Analytics & Insights
+### 📊 Insights & Analytics  
 ![Analytics & Insights](Insights.png)
 
-## Features
+---
 
-- **Resume Parsing**: Upload resumes to extract structured data automatically.
-- **Candidate Browsing**: View and sort a list of job candidates with their key information.
-- **Advanced Filtering**: Filter candidates by experience level, skills, location, and employment status.
-- **Job Requirement Matching**: Input job requirements and see candidates ranked by relevance.
-- **Skills Normalization**: Group similar skills (e.g., "React", "ReactJS", "React.js") for better filtering.
-- **Location-based Sorting**: Sort candidates by proximity to a specified location.
-- **Data Visualization**: View insights about candidate skills and experience distribution.
-- **Responsive Design**: Works on desktop and mobile devices.
+## ✨ Key Features
 
-## Technology Stack
+- 📄 **Resume Parsing**: Upload resumes to extract structured candidate data
+- 📌 **Advanced Filtering**: Filter by skills, experience level, work type, and more
+- 🧠 **AI-Powered Relevance Matching**: Matches candidates to job descriptions using TF-IDF algorithms
+- 🧩 **Skill Normalization**: Groups similar skill terms like `React`, `ReactJS`, and `React.js`
+- 📍 **Location-Aware Sorting**: Sort candidates by distance from a target location
+- 📊 **Data Visualizations**: View trends in experience, skill distribution, and employment type
+- 🌗 **Responsive UI + Dark Mode**: Works seamlessly on desktop and mobile devices
 
-- **Frontend**: React 18 with TypeScript
-- **Routing**: React Router v6
+---
+
+## 🧪 Technology Stack
+
+- **Framework**: React 18 + TypeScript
 - **Styling**: Tailwind CSS
+- **Routing**: React Router v6
 - **Charts**: Recharts
 - **Icons**: Lucide React
-- **Date Handling**: date-fns
+- **Date Utilities**: date-fns
 - **Build Tool**: Vite
 
-## Project Architecture
+---
 
-```
+## 📁 Project Structure
+
 src/
-├── components/ - Reusable UI components
-│   ├── dashboard/ - Dashboard-specific components
-│   ├── insights/ - Data visualization components
-│   └── layout/ - Layout components like header, sidebar
-├── data/ - Data fetching and manipulation
-├── pages/ - Top-level page components
-│   ├── Dashboard.tsx - Main candidate browsing page
-│   └── Insights.tsx - Analytics and data visualization page
-├── types/ - TypeScript type definitions
-├── utils/ - Utility functions
-│   ├── filterUtils.ts - Filtering and sorting logic
-│   ├── skillNormalizationUtils.ts - Skill grouping logic
-│   └── tfidfUtils.ts - Text matching algorithms
-└── App.tsx - Main application component
-```
+├── components/ # Reusable UI components
+│ ├── dashboard/ # Candidate cards, filters, list, modals
+│ ├── insights/ # Data visualizations and charts
+│ └── layout/ # Sidebar, header, theme toggle
+├── data/ # Static or mock data
+├── pages/ # Page-level components (Dashboard, Insights)
+├── types/ # TypeScript interfaces and types
+├── utils/ # Business logic and data processing
+│ ├── filterUtils.ts
+│ ├── skillNormalizationUtils.ts
+│ └── tfidfUtils.ts
+└── App.tsx # App entry point
 
-## Key Features Implementation
 
-### Candidate Dashboard
-- **Candidate Filtering**: Uses useMemo hooks and efficient filter functions to maintain performance with large datasets.
-- **Skill Normalization**: Implements algorithms to group similar skills, improving the filtering experience.
-- **Score Calculation**: Calculates candidate relevance scores based on experience, skills, and job requirement matching.
-- **TF-IDF**: Utilizes Term Frequency-Inverse Document Frequency for matching job descriptions to candidate skills and experience.
+---
 
-### Insights & Analytics Page
-The Insights page provides comprehensive analytics about the candidate pool with three main sections:
+## 🚀 Getting Started
 
-1. **Candidate Pool Summary**
-   - Key metrics about the candidate pool (total candidates, average experience, etc.)
-   - Experience level distribution
-   - Employment status breakdown
+### 📦 Prerequisites
 
-2. **Geographic Distribution**
-   - Interactive location heatmap showing candidate geographic distribution
-   - Region-based candidate density visualization
-
-3. **Skills & Experience Analysis**
-   - Top skills among candidates with frequency visualization
-   - Experience distribution charts
-   - Skill clustering and relationship visualization
-   - Interactive chart elements with detailed tooltips
-
-The Insights page is built with modular components for maintainability and features collapsible sections for better user experience.
-
-## Setup and Installation
-
-### Prerequisites
-
-- Node.js (v14.0 or higher)
+- Node.js v14 or higher
 - npm or yarn
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd hr-candidates-dashboard
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Building for Production
+### ⚙️ Setup
 
 ```bash
+git clone https://github.com/jocodev0509/smarthire-dashboard.git
+cd smarthire-dashboard
+npm install    # or yarn install
+npm run dev    # or yarn dev
+
+🛠️ Build for Production
+bash
+Copy
+Edit
 npm run build
 # or
 yarn build
-```
+The optimized output will be in the /dist directory.
 
-The build output will be in the `dist` directory.
+☁️ Deployment
+This app is ready to deploy on platforms like Vercel, Netlify, or GitHub Pages.
+A live version is available at:
 
-## Deployment
+🔗 smarthire.vercel.app <!-- Replace with your actual Vercel link -->
 
-The application is configured for deployment on Vercel. Simply connect your repository to Vercel for automatic deployments.
+🔒 Data Source
+Candidate data is simulated or generated from uploaded resumes and includes:
 
-## Data Source
+Name and contact info
 
-The dashboard displays data extracted from candidate resumes, including:
-- Personal information and contact details
-- Work experience 
-- Projects
-- Skills
+Work experience
 
-## License
+Skills and projects
 
-[MIT License](LICENSE) 
+Location and availability
+
+👨‍💻 Author
+Joshua Cohen
+Full-stack developer focused on building scalable, intuitive web applications.
+GitHub: @jocodev0509
+
+📄 License
+This project is licensed under the MIT License.
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know if you'd like:
+- A downloadable `.md` file
+- Your screenshot filenames adjusted
+- Help adding a **dark mode toggle** or **new feature** to show in your demo

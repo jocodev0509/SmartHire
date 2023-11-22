@@ -1,5 +1,6 @@
 {
-  "name": "hr-candidates-dashboard",
+  "name": "SmartHire",
+  "author": "Joshua Cohen <jocodev0509@gmail.com>",
   "private": true,
   "version": "0.1.0",
   "type": "module",
