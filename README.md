@@ -42,22 +42,23 @@ This project was developed by **Joshua Cohen** to demonstrate full-stack UI arch
 
 ## 📁 Project Structure
 
+```
 src/
-├── components/ # Reusable UI components
-│ ├── dashboard/ # Candidate cards, filters, list, modals
-│ ├── insights/ # Data visualizations and charts
-│ └── layout/ # Sidebar, header, theme toggle
-├── data/ # Static or mock data
-├── pages/ # Page-level components (Dashboard, Insights)
-├── types/ # TypeScript interfaces and types
-├── utils/ # Business logic and data processing
-│ ├── filterUtils.ts
-│ ├── skillNormalizationUtils.ts
-│ └── tfidfUtils.ts
-└── App.tsx # App entry point
-
-
----
+├── components/ - Reusable UI components
+│   ├── dashboard/ - Dashboard-specific components
+│   ├── insights/ - Data visualization components
+│   └── layout/ - Layout components like header, sidebar
+├── data/ - Data fetching and manipulation
+├── pages/ - Top-level page components
+│   ├── Dashboard.tsx - Main candidate browsing page
+│   └── Insights.tsx - Analytics and data visualization page
+├── types/ - TypeScript type definitions
+├── utils/ - Utility functions
+│   ├── filterUtils.ts - Filtering and sorting logic
+│   ├── skillNormalizationUtils.ts - Skill grouping logic
+│   └── tfidfUtils.ts - Text matching algorithms
+└── App.tsx - Main application component
+```
 
 ## 🚀 Getting Started
 
@@ -73,23 +74,24 @@ git clone https://github.com/jocodev0509/smarthire-dashboard.git
 cd smarthire-dashboard
 npm install    # or yarn install
 npm run dev    # or yarn dev
-
-🛠️ Build for Production
-bash
+```
+## 🛠️ Build for Production
+```bash
 Copy
 Edit
 npm run build
 # or
 yarn build
+```
 The optimized output will be in the /dist directory.
 
-☁️ Deployment
+## ☁️ Deployment
 This app is ready to deploy on platforms like Vercel, Netlify, or GitHub Pages.
 A live version is available at:
 
 🔗 smarthire.vercel.app <!-- Replace with your actual Vercel link -->
 
-🔒 Data Source
+## 🔒 Data Source
 Candidate data is simulated or generated from uploaded resumes and includes:
 
 Name and contact info
@@ -100,14 +102,15 @@ Skills and projects
 
 Location and availability
 
-👨‍💻 Author
-Joshua Cohen
-Full-stack developer focused on building scalable, intuitive web applications.
-GitHub: @jocodev0509
+## 👨‍💻 Author
 
-📄 License
+**Joshua Cohen**  
+Full-stack developer focused on building scalable, intuitive web applications.  
+GitHub: [@jocodev0509](https://github.com/jocodev0509)
+
+## 📄 License
 This project is licensed under the MIT License.
-
+```
 yaml
 Copy
 Edit
